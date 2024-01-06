@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+*{
+
+}
+
+#grafico-linha{
+    margin-bottom: 18%;
+}
+
+#resize{
+    text-align: center;
+    height: 30vh;
+}
+
+.container-bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.centralize{
+    text-align: center;
+}
+
+.dont-get-pdf{
+    visibility: hidden;
+}

@@ -36,6 +36,8 @@ $nivel = $array['nivel_usuario'];
 
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin-2.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/download-pdf.css" media="print">
+  <link rel="stylesheet" href="../../css/normalize.css">
 
 </head>
 
@@ -254,10 +256,10 @@ $nivel = $array['nivel_usuario'];
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4 no-print">
+          <div class="dont-get-pdf d-sm-flex align-items-center justify-content-between mb-4 no-print">
 
             <button type="button" onclick="window.print()"
-              class="zoom d-none d-sm-inline-block btn btn-sm bg-gradient-primary text-white shadow-sm"><i
+              class=" zoom d-none d-sm-inline-block btn btn-sm bg-gradient-primary text-white shadow-sm"><i
                 class="zoom fas fa-download fa-sm text-white"></i> Gerar PDF da tela</button>
           </div>
 
@@ -284,9 +286,9 @@ $nivel = $array['nivel_usuario'];
                 </div>
 
                 <!-- Card Body -->
-                <div class="card-body">
+                <div class="card-body ">
                   <div id="grafico-linha" class="chart-area">
-                    <canvas id="chart-linha"></canvas>
+                    <canvas id="chart-linha" class=""></canvas>
                   </div>
 
 
@@ -367,20 +369,22 @@ $nivel = $array['nivel_usuario'];
           <div class="row">
 
 
-            <div class="col-xl-4 col-lg-5 ml-auto mr-auto">
-              <div class="card shadow mb-4">
+            <div class="col-xl-4 col-lg-5 ml-auto mr-auto" >
+              <div class="centralize card shadow mb-4" id="resize">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Tipos de pagamentos (Mês Atual)</h6>
                 </div>
                 <!-- Card Body -->
-                <div class="card-body">
+                <div class="centralize card-body">
                   <!-- Testando aqui -->
                   <div id="grafico-pizza" class="chart-bar">
-                    <canvas id="chart-pizza"></canvas>
+                    <canvas id="chart-pizza" class=""></canvas>
                   </div>
-                  <hr>
-                  <span class="mr-auto ml-auto">Valor em R$ da venda por tipo de pagamento</span>
+                  <div class="container-bottom">
+                    <hr>
+                    <span class="mr-auto ml-auto">Valor em R$ da venda por tipo de pagamento</span>
+                  </div>
                 </div>
               </div>
             </div>
